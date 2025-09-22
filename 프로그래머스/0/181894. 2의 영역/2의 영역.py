@@ -1,9 +1,9 @@
 def solution(arr):
-    answer=[]
-    for i in range(len(arr)):
-        if arr[i]==2:
-            answer.append(i)
-    if len(answer)!=0:
-            return arr[min(answer):max(answer)+1]
+    idx = []
+    for x, y in enumerate(arr):
+        if y == 2:
+            idx.append(x)
+    if idx:
+        return arr[idx[0]:idx[-1]+1]
     else:
         return [-1]
